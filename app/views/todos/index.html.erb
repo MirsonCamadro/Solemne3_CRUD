@@ -7,8 +7,10 @@
     <div class='container'>
         <%= link_to 'Show', todo %>
         <%= link_to 'Edit', edit_todo_path(todo) %>
+        <%= link_to 'Delete', todo, method: :delete,
+         data: { confirm: 'Estas seguro de eliminar esta tarea?'} %>
     </div>
     <% end %>
 </div>
-
+<br>
 <%= link_to 'Crear ToDo', todos_new_path %>
