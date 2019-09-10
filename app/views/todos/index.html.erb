@@ -9,7 +9,7 @@
                 <%= link_to 'Delete', todo, method: :delete,
                 data: { confirm: 'Estas seguro de eliminar esta tarea?'}, class:"btn btn-danger" %>
                 <% if todo.completed == true %>
-                    <a class="btn btn-success"> Tarea Completada </a>
+                    <a class="btn btn-success"> Tarea Completada ✰ </a>
                 <% else %>
                     <%= link_to "Completada", completed_todo_path(todo), class:"btn btn-outline-success" %>
                 <% end %>

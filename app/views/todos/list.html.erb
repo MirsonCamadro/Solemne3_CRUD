@@ -1,18 +1,22 @@
 <div class="row">
     <div class="col-6">
-        <h4> Tareas no completadas </h4>
-        <% @todos.each do |todo| %>
-            <% if todo.completed == false %>
-                <%= todo.description %> <br>
+        <h4 class="font-weight-bolder text-center"> Tareas no completadas </h4>
+        <div class="card border-danger mb-3 p-3" style="max-width: 50rem;">
+            <% @todos.each do |todo| %>
+                <% if todo.completed == false %>
+                    <%= todo.description %> <br>
+                <% end %>
             <% end %>
-        <% end %>
+        </div>
     </div>
     <div class="col-6">
-        <h4> Tareas completadas </h4>
-        <% @todos.each do |todo| %>
-            <% if todo.completed == true %>
-                <%= todo.description %> <br>
+        <h4 class="font-weight-bolder text-center"> Tareas completadas </h4>
+        <div class="card border-success mb-3 p-3" style="max-width: 50rem;">
+            <% @todos.each do |todo| %>
+                <% if todo.completed == true %>
+                    <%= todo.description %> <br>
+                <% end %>
             <% end %>
-        <% end %>
+        </div>
     </div>
 </div>
