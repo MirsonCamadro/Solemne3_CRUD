@@ -1,4 +1,5 @@
-
-<h3> Descripcion / Completado </h3>
-<p><%= "#{@todo.description} / #{@todo.completed}" %>
-<%= link_to "<< Atras", todos_path %></p>
+<div class="card border-secondary mb-3 p-3" style="max-width: 50rem;">
+    <h3> Descripcion / Completado </h3>
+    <p><%= "#{@todo.description} / #{@todo.completed}" %> </p>
+    <%= link_to "Atras", todos_path, class:"btn btn-primary" %>
+</div>
