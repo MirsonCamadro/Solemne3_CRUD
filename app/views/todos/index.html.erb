@@ -8,12 +8,13 @@
         <%= link_to 'Delete', todo, method: :delete,
          data: { confirm: 'Estas seguro de eliminar esta tarea?'} %>
         <% if todo.completed == true %>
-        <p> Tarea Completada </p>
+            <p> Tarea Completada </p>
         <% else %>
-        <%= link_to "Completada", completed_todo_path(todo) %>
+            <%= link_to "Completada", completed_todo_path(todo) %>
         <% end %>
     </div>
     <% end %>
 </div>
 <br>
+
 <%= link_to 'Crear ToDo', todos_new_path %>

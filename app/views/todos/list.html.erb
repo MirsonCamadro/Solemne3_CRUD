@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-6">
+        <h4> Tareas no completadas </h4>
+        <% @todos.each do |todo| %>
+            <% if todo.completed == false %>
+                <%= todo.description %> <br>
+            <% end %>
+        <% end %>
+    </div>
+    <div class="col-6">
+        <h4> Tareas completadas </h4>
+        <% @todos.each do |todo| %>
+            <% if todo.completed == true %>
+                <%= todo.description %> <br>
+            <% end %>
+        <% end %>
+    </div>
+</div>
