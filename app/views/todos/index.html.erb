@@ -1,11 +1,11 @@
 <div class="well">
-    <% todos.each do |todo| %>
-    <h3> Descripcion tarea </h3>
+    <% @todos.each do |todo| %>
+    <h5> Descripcion tarea </h5>
     <%= todo.description %> <br>
-    <h3> ¿Tarea Completa? </h3>
-    <%= todo.complete %> <br>
+    <h5> ¿Tarea Completa? </h5>
+    <%= todo.completed %> <br>
     <div class='container'>
-        
+        <%= link_to 'Show', todo %>
     </div>
     <% end %>
 </div>
