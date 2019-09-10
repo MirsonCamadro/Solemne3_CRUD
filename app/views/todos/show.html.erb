@@ -1,5 +1,5 @@
 <div class="card border-secondary mb-3 p-3" style="max-width: 50rem;">
-    <h3> Descripcion / Completado </h3>
-    <p><%= "#{@todo.description} / #{@todo.completed}" %> </p>
+    <p><%= "Tarea: #{@todo.description}" %> </p>
+    <p><%= "Completado: #{@todo.completed}" %> </p>
     <%= link_to "Atras", todos_path, class:"btn btn-primary" %>
 </div>
