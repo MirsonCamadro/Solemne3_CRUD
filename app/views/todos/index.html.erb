@@ -1,14 +1,17 @@
 <div class="well">
     <% @todos.each do |todo| %>
-    <h5> Descripcion tarea </h5>
-    <%= todo.description %> <br>
-    <h5> ¿Tarea Completa? </h5>
-    <%= todo.completed %> <br>
+        <h4> Descripcion / Completado </h4>
+        <p><%= "#{todo.description} / #{todo.completed}" %>
     <div class='container'>
         <%= link_to 'Show', todo %>
         <%= link_to 'Edit', edit_todo_path(todo) %>
         <%= link_to 'Delete', todo, method: :delete,
          data: { confirm: 'Estas seguro de eliminar esta tarea?'} %>
+        <% if todo.completed == true %>
+        <p> Tarea Completada </p>
+        <% else %>
+        <%= link_to "Completada", completed_todo_path(todo) %>
+        <% end %>
     </div>
     <% end %>
 </div>
